@@ -20,6 +20,6 @@ steps:
     location: 'West Europe'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/artaz4002/AzureRmPipeline-repo/master/CreateWebApp/azuredeploy.json'
-    overrideParameters: '-projectName testazdevops1404'
+    overrideParameters: '-projectName testaz1404'
     deploymentMode: 'Incremental'
-    deploymentName: 'DeployPipelineTemplateAz1404'
+    deploymentName: 'DeployPipelineAz1404'
