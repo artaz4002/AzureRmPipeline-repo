@@ -12,7 +12,7 @@ pool:
 steps:
 - task: AzureFileCopy@4
   inputs:
-    SourcePath: 'CreateWebApp'
+    SourcePath: 'CreateWebApp/azuredeploy.json'
     azureSubscription: 'devops250122'
     Destination: 'AzureBlob'
     storage: 'storacc1717'
