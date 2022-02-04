@@ -28,6 +28,6 @@ steps:
     resourceGroupName: 'testcourse'
     location: 'West Europe'
     templateLocation: 'URL of the file'
-    csmFileLink: '$(AzureFileCopy.StorageContainerUri)CreateWebApp/azuredeploy.json?sp=r&st=2022-02-04T11:43:48Z&se=2022-02-04T19:43:48Z&spr=https&sv=2020-08-04&sr=c&sig=9hze02uDhTNiHjLIuDKAUuQGPhJnS4Y%2Bajw4HI%2Fbatw%3D'
+    csmFileLink: '$(AzureFileCopy.StorageContainerUri)CreateWebApp/azuredeploy.json?sp=r&st=2022-02-04T12:06:26Z&se=2022-02-04T20:06:26Z&spr=https&sv=2020-08-04&sr=b&sig=tWsGzaRjFG7gHVGBfKIHCd3rt%2FT83D13uevfcEwT2TY%3D'
     deploymentMode: 'Incremental'
     deploymentName: 'deploy1'
