@@ -19,15 +19,6 @@ steps:
     ContainerName: 'cont1717'
   name: AzureFileCopy
 
-- task: AzureResourceManagerTemplateDeployment@3
-  inputs:
-    deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'devops250122'
-    subscriptionId: '6ee4be50-e10e-498b-b751-6dcdb3ba8a8d'
-    action: 'Create Or Update Resource Group'
-    resourceGroupName: 'testcourse'
-    location: 'West Europe'
-    templateLocation: 'URL of the file'
-    csmFileLink: '$(AzureFileCopy.StorageContainerUri)CreateWebApp/azuredeploy.json?sp=r&st=2022-02-04T12:06:26Z&se=2022-02-04T20:06:26Z&spr=https&sv=2020-08-04&sr=b&sig=tWsGzaRjFG7gHVGBfKIHCd3rt%2FT83D13uevfcEwT2TY%3D'
-    deploymentMode: 'Incremental'
-    deploymentName: 'deploy1'
+- script: | 
+    echo $(AzureFileCopy.StorageContainerUri)
+    echo "$(AzureFileCopy.StorageContainerSasToken)"
