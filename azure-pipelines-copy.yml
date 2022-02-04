@@ -18,3 +18,16 @@ steps:
     storage: 'storacc1717'
     ContainerName: 'cont1717'
   name: AzureFileCopy
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'devops250122'
+    subscriptionId: '6ee4be50-e10e-498b-b751-6dcdb3ba8a8d'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'testcourse'
+    location: 'West Europe'
+    templateLocation: 'URL of the file'
+    csmFileLink: '$(AzureFileCopy.StorageContainerUri)CreateWebApp/azuredeploy.json$(AzureFileCopy.StorageContainerSasToken)'
+    deploymentMode: 'Incremental'
+    deploymentName: 'deploy1'
